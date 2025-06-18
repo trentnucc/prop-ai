@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Code, Mail, MessageSquare, Instagram, Database } from 'lucide-react';
-import { Link } from '../components/ui';
+import { Link } from '../components/ui/index.jsx';
 
 const productIcons = {
   'website-builder': Code,

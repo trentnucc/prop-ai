@@ -1,5 +1,5 @@
 import React from 'react';
-import { DemoButton } from './ui';
+import { DemoButton } from './ui/index.jsx';
 import { PageHeader } from './PageHeader';
 import { FeatureCard } from './FeatureCard';
 

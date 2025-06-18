@@ -2,7 +2,7 @@ import React from 'react';
 import { SolutionLayout } from '../components/SolutionLayout';
 import { CaseStudySection } from '../components/CaseStudySection';
 import { CheckCircle, Target, Zap, Users, Shield } from 'lucide-react';
-import { Mail } from '../components/ui';
+import { Mail } from '../components/ui/index.jsx';
 
 const features = [
   {

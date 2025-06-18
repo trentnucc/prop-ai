@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { DemoButton, Link, Mail } from '../components/ui';
+import { DemoButton, Link, Mail } from '../components/ui/index.jsx';
 import { FeatureCard } from '../components/FeatureCard';
 import { Database, Code, MessageSquare, Headphones, Phone, Video } from 'lucide-react';
 
