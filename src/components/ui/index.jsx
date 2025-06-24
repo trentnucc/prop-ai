@@ -15,7 +15,7 @@ export function DemoButton({ children, className = "", product, ...props }) {
   return (
     <button
       onClick={handleClick}
-      className={`bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-3 rounded-md transition-colors ${className}`}
+      className={`btn-modern text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 ${className}`}
       {...props}
     >
       {children}
