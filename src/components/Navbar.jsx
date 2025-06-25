@@ -16,7 +16,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-100 fixed w-full z-50">
+    <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-100 fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -31,7 +31,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <div className="relative group">
               <button
-                className="flex items-center text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+                className="flex items-center text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
@@ -50,7 +50,7 @@ export function Navbar() {
                       <Link
                         key={solution.name}
                         to={solution.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                         onClick={() => setSolutionsOpen(false)}
                       >
                         {solution.name}
@@ -63,7 +63,7 @@ export function Navbar() {
             
             <Link
               to="/about"
-              className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+              className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
             >
               About
             </Link>
@@ -98,7 +98,7 @@ export function Navbar() {
                 <Link
                   key={solution.name}
                   to={solution.href}
-                  className="block text-gray-600 hover:text-gray-900 px-6 py-2 text-sm"
+                  className="block text-gray-600 hover:text-gray-900 px-6 py-2 text-sm transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {solution.name}
@@ -108,7 +108,7 @@ export function Navbar() {
             
             <Link
               to="/about"
-              className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+              className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
               About
@@ -116,7 +116,7 @@ export function Navbar() {
             
             <Link
               to="/demo"
-              className="block bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium mx-3 mt-4"
+              className="block bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium mx-3 mt-4 text-center"
               onClick={() => setIsOpen(false)}
             >
               Schedule a Demo

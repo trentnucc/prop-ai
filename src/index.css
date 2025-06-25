@@ -6,9 +6,9 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
 }
 
 /* Custom scrollbar */
@@ -24,32 +24,26 @@ body {
   @apply bg-gray-400 rounded-lg;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-500;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease;
-}
-
-/* Simple floating animation */
+/* Floating shapes animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
-  50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
-}
-
-.floating-shapes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg); 
+    opacity: 0.6; 
+  }
+  33% { 
+    transform: translateY(-30px) translateX(20px) rotate(120deg); 
+    opacity: 0.8; 
+  }
+  66% { 
+    transform: translateY(10px) translateX(-15px) rotate(240deg); 
+    opacity: 0.4; 
+  }
 }
 
 .floating-shape {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, #3b82f6, #60a5fa);
-  animation: float 6s ease-in-out infinite;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  animation: float 8s ease-in-out infinite;
+  filter: blur(1px);
 }
