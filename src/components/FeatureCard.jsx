@@ -2,16 +2,16 @@ import React from 'react';
 
 export function FeatureCard({ icon: Icon, title, description }) {
   return (
-    <div className="bg-white p-8 rounded-lg hover:shadow-lg transition-shadow duration-300 group">
-      <div className="w-12 h-12 mb-6 text-blue-500 group-hover:text-blue-600 transition-colors">
+    <div className="bg-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow duration-200">
+      <div className="w-12 h-12 mb-4 text-blue-500">
         <Icon className="w-full h-full" />
       </div>
       
-      <h3 className="text-xl font-semibold text-gray-900 mb-4">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">
         {title}
       </h3>
       
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-gray-600 text-sm leading-relaxed">
         {description}
       </p>
     </div>
