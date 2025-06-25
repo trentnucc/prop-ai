@@ -34,13 +34,13 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
   if (submitted) {
     return (
       <div className="max-w-md mx-auto p-8 glass rounded-2xl text-center">
-        <div className="w-16 h-16 mx-auto mb-6 bg-green-100 rounded-full flex items-center justify-center">
-          <CheckCircle className="h-8 w-8 text-green-600" />
+        <div className="w-16 h-16 mx-auto mb-6 bg-green-500/20 rounded-full flex items-center justify-center border border-green-500/30">
+          <CheckCircle className="h-8 w-8 text-green-400" />
         </div>
-        <h3 className="text-xl font-semibold text-green-800 mb-3">
+        <h3 className="text-xl font-semibold text-green-400 mb-3">
           Thank you for your submission!
         </h3>
-        <p className="text-green-700 leading-relaxed">
+        <p className="text-gray-300 leading-relaxed">
           We'll contact you within 24 hours to discuss your video editing needs.
         </p>
       </div>
@@ -49,13 +49,13 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
 
   return (
     <div className="max-w-md mx-auto">
-      <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
+      <h3 className="text-2xl font-semibold text-white mb-8 text-center">
         {title}
       </h3>
       
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Full Name *
           </label>
           <div className="relative">
@@ -66,14 +66,14 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
               required
               value={formData.name}
               onChange={handleChange}
-              className="input-modern w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none"
+              className="input-futuristic w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none"
               placeholder="Enter your full name"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Email Address *
           </label>
           <div className="relative">
@@ -84,14 +84,14 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
               required
               value={formData.email}
               onChange={handleChange}
-              className="input-modern w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none"
+              className="input-futuristic w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none"
               placeholder="Enter your email"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Phone Number *
           </label>
           <div className="relative">
@@ -102,14 +102,14 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
               required
               value={formData.phone}
               onChange={handleChange}
-              className="input-modern w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none"
+              className="input-futuristic w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none"
               placeholder="Enter your phone number"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Company Name
           </label>
           <input
@@ -117,13 +117,13 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="input-modern w-full px-4 py-4 rounded-xl focus:outline-none"
+            className="input-futuristic w-full px-4 py-4 rounded-xl focus:outline-none"
             placeholder="Enter your company name"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Project Details
           </label>
           <div className="relative">
@@ -133,7 +133,7 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
               rows={4}
               value={formData.message}
               onChange={handleChange}
-              className="input-modern w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none resize-none"
+              className="input-futuristic w-full pl-12 pr-4 py-4 rounded-xl focus:outline-none resize-none"
               placeholder="Tell us about your video editing needs..."
             />
           </div>
@@ -142,7 +142,7 @@ export function ContactForm({ onSubmit, title = "Get Your Video Edited" }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-modern w-full text-white font-medium py-4 px-6 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-futuristic w-full text-white font-medium py-4 px-6 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Submitting...' : 'Get Started'}
         </button>

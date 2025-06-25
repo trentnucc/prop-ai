@@ -15,7 +15,7 @@ export function DemoButton({ children, className = "", product, ...props }) {
   return (
     <button
       onClick={handleClick}
-      className={`btn-modern text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 ${className}`}
+      className={`btn-futuristic text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 ${className}`}
       {...props}
     >
       {children}
