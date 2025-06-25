@@ -16,44 +16,44 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="glass fixed w-full z-50 border-b border-white/10">
+    <nav className="bg-white shadow-sm fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 group flex items-center">
-              <div className="w-8 h-8 mr-3 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="w-8 h-8 mr-3 rounded-lg bg-blue-500 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white tracking-tight">
-                Propensity<span className="gradient-text">AI</span>
+              <span className="text-xl font-bold text-gray-900">
+                Propensity<span className="text-blue-500">AI</span>
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-8">
             <div className="relative group">
               <button
-                className="flex items-center text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-xl hover:bg-white/10 transition-all duration-300"
+                className="flex items-center text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
                 Solutions
-                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               
               {solutionsOpen && (
                 <div
-                  className="absolute left-0 mt-2 w-72 glass rounded-2xl shadow-2xl ring-1 ring-white/10 overflow-hidden"
+                  className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
                   onMouseEnter={() => setSolutionsOpen(true)}
                   onMouseLeave={() => setSolutionsOpen(false)}
                 >
-                  <div className="py-2">
+                  <div className="py-1">
                     {solutions.map((solution) => (
                       <Link
                         key={solution.name}
                         to={solution.href}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                         onClick={() => setSolutionsOpen(false)}
                       >
                         {solution.name}
@@ -66,14 +66,14 @@ export function Navbar() {
             
             <Link
               to="/about"
-              className="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
             >
               About
             </Link>
             
             <Link
               to="/demo"
-              className="btn-futuristic text-white px-6 py-2.5 rounded-xl text-sm font-medium ml-4"
+              className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
             >
               Schedule Demo
             </Link>
@@ -83,7 +83,7 @@ export function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none p-2 rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="text-gray-700 hover:text-gray-900 focus:outline-none p-2"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -94,14 +94,14 @@ export function Navbar() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass border-t border-white/10">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
             <div className="space-y-1">
-              <div className="text-gray-300 px-3 py-2 text-sm font-medium">Solutions</div>
+              <div className="text-gray-700 px-3 py-2 text-sm font-medium">Solutions</div>
               {solutions.map((solution) => (
                 <Link
                   key={solution.name}
                   to={solution.href}
-                  className="block text-gray-400 hover:text-white px-6 py-2 text-sm rounded-xl hover:bg-white/10 transition-all duration-300"
+                  className="block text-gray-600 hover:text-gray-900 px-6 py-2 text-sm"
                   onClick={() => setIsOpen(false)}
                 >
                   {solution.name}
@@ -111,7 +111,7 @@ export function Navbar() {
             
             <Link
               to="/about"
-              className="block text-gray-300 hover:text-white px-3 py-2 text-sm font-medium rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
               onClick={() => setIsOpen(false)}
             >
               About
@@ -119,7 +119,7 @@ export function Navbar() {
             
             <Link
               to="/demo"
-              className="block btn-futuristic text-white px-3 py-2 rounded-xl text-sm font-medium mx-3 mt-4"
+              className="block bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium mx-3 mt-4"
               onClick={() => setIsOpen(false)}
             >
               Schedule Demo
